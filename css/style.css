@@ -1,0 +1,493 @@
+@font-face {
+    font-family:'OpenSans-Regular';
+    src:url('../fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'OpenSans-Light';
+    src:url('../fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'OpenSans-Semibold';
+    src:url('../fonts/OpenSans-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'bebas';
+    src:url('../fonts/BEBAS.TTF') format('truetype');
+}
+
+header{
+    color: #fff;
+}
+
+body{
+    font-family:'OpenSans-Regular';
+}
+
+.clear{
+    display: inline-block;
+    width: 100%;
+    clear: both;
+}
+
+.homebanner{
+    background: url(../images/banner.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.top-menu .menu-icon {
+    position: absolute;
+    background-color: transparent;
+    width: 35px;
+    height: 20px;
+    z-index: 1000;
+    transition: -webkit-transform 550ms cubic-bezier(.23,1,.32,1);
+    transition: transform 550ms cubic-bezier(.23,1,.32,1);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    right: 0;
+}
+
+.top-menu .menu-icon .bar {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: all 550ms cubic-bezier(.23,1,.32,1);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+.top-menu .menu-icon .bar.top {
+  top: 0;
+  margin-top: -1px;
+}
+
+.top-menu .menu-icon .bar.middle {
+  top: 50%;
+  margin-top: -1px;
+}
+
+.top-menu .menu-icon .bar.bottom {
+  bottom: 0;
+  margin-bottom: -1px;
+}
+
+.top-menu .menu-icon.close {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  opacity: 1;
+}
+
+.top-menu .menu-icon.close .bar.top {
+  top: 50%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.top-menu .menu-icon.close .bar.middle {
+  opacity: 0;
+}
+
+.top-menu .menu-icon.close .bar.bottom {
+  bottom: 50%;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.main-menu{
+    display: none;
+}
+
+.logo, .top-menu{
+    padding: 20px 0;
+    position: relative;
+}
+
+.main-menu{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    right: 0;
+    width: 50%;
+    z-index: 9;
+    border: 1px solid #000;
+    border-radius: 5px;
+    top: 0;
+    bottom: 0;
+}
+
+.main-menu ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 100px 0;
+}
+
+.main-menu ul li a{
+    color: #fff;
+    font-size: 25px;
+    padding: 30px 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none
+}
+
+header h1{
+    font-family: 'bebas';
+    font-size: 90px;
+}
+
+header .form{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+header .header{
+    font-family: 'OpenSans-Light';
+    text-transform: capitalize;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header .form input.form-control{
+    border-radius: 10px;
+    font-size: 16px;
+    height: 37px;
+}
+
+.greenbtn{
+    display: inline-block;
+    background: #98BB65;
+    border: 1px solid #98BB65;
+    color: #fff;
+    transition: 0.5s;
+    font-size: 15px;
+    margin: 15px 0;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.greenbtn:hover{
+    color: #fff;
+    text-decoration: none;
+    background: none;
+}
+
+.scroller{
+    display: inline-block;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.scroller img{
+    display: inline-block;
+    margin: auto;
+}
+
+section > div{
+    padding: 40px 0;
+}
+
+.about{
+  background: #ebebeb;
+}
+
+.about h2{
+    font-family: 'bebas';
+    color: #0931a3;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin: 50px 0;
+}
+
+.about p{
+  color: #666;
+  line-height: 28px;
+}
+
+.knowmore h2{
+    font-family: 'OpenSans-Light';
+    color: #0931a3;
+    font-size: 42px;
+    text-transform: capitalize;
+    margin: 0 0 60px;
+}
+
+.knowmore .image{
+    border: 1px solid #0931a3;
+    display: inline-block;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.knowmore .image img{
+    margin: auto;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+
+.knowmore h3{
+    color: #0931a3;
+    font-size: 24px;
+    text-transform: capitalize;
+    min-height: 70px;
+}
+
+.knowmore p{
+    color: #999;
+    font-size: 16px;
+}
+
+.findfitness {
+    background: #ebebeb;
+}
+
+.findfitness h2{
+    font-family: 'OpenSans-Light';
+    color: #0931a3;
+    font-size: 42px;
+    text-transform: none;
+    margin: 0 0 60px;
+}
+
+.ui-tabs-panel iframe{
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+.ui-widget.ui-widget-content{
+    border: none;
+    background: none;
+}
+
+.ui-tabs .ui-tabs-nav{
+    border: none;
+    background: none;
+}
+
+.ui-tabs .ui-tabs-panel{
+    border: none;
+    padding: 14px 0;
+}
+
+.ui-tabs .ui-tabs-nav li{
+    background: none;
+    border: none;
+    margin-right: 40px;
+    float: none;
+    display: inline-block;
+}
+
+.ui-tabs .ui-tabs-nav li:last-child{
+    margin-right: 0;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active{
+    border-bottom: 3px solid #0931a3;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    font-family: 'OpenSans-Light';
+    font-size: 19px;
+    text-transform: capitalize;
+    padding: 10px 0;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor:focus{
+    outline: 0;
+}
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited{
+    color: #0931a3;
+}
+
+.affiliate-gym{
+    background: url(../images/affiliates_gym.png) no-repeat top center;
+    background-size: cover;
+}
+
+.affiliate-gym h2 {
+    font-family: 'OpenSans-Light';
+    color: #fff;
+    font-size: 42px;
+    text-transform: capitalize;
+    margin: 0 0 20px;
+}
+
+.affiliate-gym p{
+    font-family: 'OpenSans-Light';
+    color: #fff;
+    width: 70%;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.affiliate-gym img{
+    margin: auto;
+}
+
+.affiliate-logo{
+    margin: 20px 0;
+}
+
+.getnotified h2 {
+    font-family: 'OpenSans-Semibold';
+    color: #29459b;
+    font-size: 42px;
+    text-transform: capitalize;
+    margin: 0 0 20px;
+}
+
+.getnotified p{
+    color: #0931a3;
+}
+
+.notified-form{
+    display: inline-block;
+    width: 80%;
+    margin: 30px 0
+}
+
+.notified-form .form-control{
+    border: 1px solid #0931a3;
+    border-radius: 3px;
+    height: 40px
+}
+
+.notified-form input[type="submit"]{
+    background: #0931a3;
+    border: 1px solid #0931a3;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.followinsta{
+    background: #000;
+    padding: 0;
+    color: #fff;
+}
+
+.followinsta h4{
+    font-size: 14px;
+}
+
+.followinsta h4 img{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.insta-slider{
+    position:relative;
+    margin:0 auto;
+    top:0px;
+    left:0px;
+    width:809px;
+    height:150px;
+    overflow:hidden;
+    visibility:hidden;
+}
+
+.insta-slider .slides{
+    cursor:default;
+    position:relative;
+    top:0px;
+    left:0px;
+    width:809px;
+    height:150px;
+    overflow:hidden;
+}
+
+footer{
+    background: #0931a3;
+    color: #fff;
+    padding: 10px 0;
+}
+
+footer ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+footer ul li:last-child{
+    margin-right: 0;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  .ui-tabs .ui-tabs-nav li {
+      margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+  header h1 {
+    font-size: 65px;
+  }
+  .ui-tabs .ui-tabs-nav li {
+      margin-right: 20px;
+  }
+  .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    font-size: 15px;
+  }
+  .notified-form .form-control {
+    margin-bottom: 14px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .main-menu {
+    width: 100%;
+  }
+  header h1 {
+    font-size: 50px;
+  }
+  header h1 br{
+    display: none;
+  }
+  .ui-tabs .ui-tabs-nav li {
+      margin-right: 10px;
+  }
+  .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    font-size: 12px;
+  }
+  .notified-form .form-control {
+    margin-bottom: 14px;
+  }
+  .findfitness h2, .knowmore h2,.about h2, .affiliate-gym h2, .getnotified h2 {
+    font-size: 30px;
+    margin: 0 0 10px;
+  }
+  .knowmore h3 {
+    font-size: 18px;
+    min-height: 100%;
+  }
+  .notified-form {
+    width: 100%;
+    margin: 20px 0;
+  }
+  footer .col-md-6{
+      text-align: center;
+  }
+  footer img{
+    margin: auto;
+  }
+}

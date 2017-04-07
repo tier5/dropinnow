@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drop In Now</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jssor.slider-22.2.8.mini.js" type="text/javascript"></script>
+<script src="js/insta-slider.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<header class="homebanner">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-6">
+				<div class="logo">
+					<img src="images/logo.png" class="img-responsive" alt="DropInNowLogo">
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6">
+				<div class="top-menu">
+                  <a href="#" class="menu-icon" style="display: block;">
+                    <div class="span bar top" style="background-color: #fff;"></div>
+                    <div class="span bar middle" style="background-color: #fff;"></div>
+                    <div class="span bar bottom" style="background-color: #fff;"></div>
+                  </a>
+                  <div class="main-menu">
+                    <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="#">Messages</a></li>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Career</a></li>
+                      <li><a href="#">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+			</div>
+		</div>
+		<div class="clear">&nbsp;</div>
+		<div class="row">
+			<div class="col-md-8 col-sm-7">
+				<h1>gym <br> registration</h1>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500</p>
+				<a href="#" class="greenbtn">Register</a>
+			</div>
+			<div class="col-md-4 col-sm-5">
+				<div class="form">
+					<div class="header">join now</div>
+					<form>
+						<div class="form-group">
+							<input type="text" name="fname" placeholder="Name" class="form-control">
+						</div>
+						<div class="form-group">
+							<input type="email" name="email" placeholder="Email" class="form-control">
+						</div>
+						<div class="form-group">
+							<input type="text" name="gymtyp" placeholder="Type of Gym" class="form-control">
+						</div>
+						<div class="form-group">
+							<input type="text" name="zip" placeholder="Zip Code" class="form-control">
+						</div>
+						<div class="form-group">
+							<input type="submit" name="submitbtn" value="Get Registered" class="greenbtn">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="clear">&nbsp;</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="scroller text-center">
+					<a href="#">
+						<img src="images/scroller.png" class="img-responsive" alt="scroller">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- Header End -->
+<!-- Main Content Start -->
+<section class="main-content">
+	<div class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<h2>About Us</h2>
+					<p>"Drop In is a mobile app which helps user find, book, and pay for classes in their immediate area. It is designed to create a community of users who art afraid to try new gyms"</p>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<img src="images/about_us_girl.jpg" alt="about" class="img-responsive">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="knowmore text-center">
+		<div class="container">
+			<div class="row">
+				<h2>Know more</h2>
+				<div class="col-md-4 col-sm-4">
+					<div class="image">
+						<img src="images/marketing.png" alt="icon" class="img-responsive">
+					</div>
+					<h3>Marketing</h3>
+					<p>Your gym and classes will be put infront of users activity looking for activities your gym provides.</p>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="image">
+						<img src="images/new_Memberships.png" alt="icon" class="img-responsive">
+					</div>
+					<h3>New Memberships <br>& Revenue Stream</h3>
+					<p>Drop in Isn't designed to replace your gym memberships. Its a way better match people with your community while making some extra revenue and gaining more members in the process.</p>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="image">
+						<img src="images/marketing.png" alt="icon" class="img-responsive">
+					</div>
+					<h3>Seamless integration</h3>
+					<p>We don't want to add another step into your current check in process. Drop In integrates seamlessly with ZenPlanner & MindyBody software for no extra headaches.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="findfitness text-center" id="findfitness">
+		<div class="container">
+			<div class="row">
+				<h2>Find fitness gyms near you</h2>
+				<div id="tabs">
+				  <ul>
+				    <li><a href="#tabs-1">Brazilian jiujutsu</a></li>
+				    <li><a href="#tabs-2">rock climbing</a></li>
+				    <li><a href="#tabs-3">yoga</a></li>
+				    <li><a href="#tabs-4">recovery</a></li>
+				    <li><a href="#tabs-5">cross fit</a></li>
+				    <li><a href="#tabs-6">spin</a></li>
+				    <li><a href="#tabs-7">wrestling</a></li>
+				    <li><a href="#tabs-8">regular gym</a></li>
+				  </ul>
+				  <div id="tabs-1">
+				    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23578821.746153876!2d-84.0506425796459!3d-30.918422997001876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrazil!5e0!3m2!1sen!2sin!4v1491487801056" allowfullscreen></iframe>
+				  </div>
+				  <div id="tabs-2">
+				    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23578821.746153876!2d-84.0506425796459!3d-30.918422997001876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrazil!5e0!3m2!1sen!2sin!4v1491487801056" allowfullscreen></iframe>
+				  </div>
+				  <div id="tabs-3">
+				    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23578821.746153876!2d-84.0506425796459!3d-30.918422997001876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrazil!5e0!3m2!1sen!2sin!4v1491487801056" allowfullscreen></iframe>
+				  </div>
+				  <div id="tabs-4">
+				    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23578821.746153876!2d-84.0506425796459!3d-30.918422997001876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrazil!5e0!3m2!1sen!2sin!4v1491487801056" allowfullscreen></iframe>
+				  </div>
+				  <div id="tabs-5">
+				    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23578821.746153876!2d-84.0506425796459!3d-30.918422997001876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrazil!5e0!3m2!1sen!2sin!4v1491487801056" allowfullscreen></iframe>
+				  </div>
+				  <div id="tabs-6">
+				    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23578821.746153876!2d-84.0506425796459!3d-30.918422997001876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrazil!5e0!3m2!1sen!2sin!4v1491487801056" allowfullscreen></iframe>
+				  </div>
+				  <div id="tabs-7">
+				    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23578821.746153876!2d-84.0506425796459!3d-30.918422997001876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrazil!5e0!3m2!1sen!2sin!4v1491487801056" allowfullscreen></iframe>
+				  </div>
+				  <div id="tabs-8">
+				    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23578821.746153876!2d-84.0506425796459!3d-30.918422997001876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrazil!5e0!3m2!1sen!2sin!4v1491487801056" allowfullscreen></iframe>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="affiliate-gym text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>affiliate gym</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="affiliate-logo">
+					<div class="col-md-3 col-sm-3">
+						<img src="images/logo_1.png" class="img-responsive" alt="affiliate_icon">
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<img src="images/logo_2.png" class="img-responsive" alt="affiliate_icon">
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<img src="images/logo_3.png" class="img-responsive" alt="affiliate_icon">
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<img src="images/logo_4.png" class="img-responsive" alt="affiliate_icon">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="affiliate-logo">
+					<div class="col-md-3 col-sm-3">
+						<img src="images/logo_5.png" class="img-responsive" alt="affiliate_icon">
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<img src="images/logo_6.png" class="img-responsive" alt="affiliate_icon">
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<img src="images/logo_7.png" class="img-responsive" alt="affiliate_icon">
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<img src="images/logo_8.png" class="img-responsive" alt="affiliate_icon">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="getnotified text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>get notified</h2>
+					<p>We'll keep you in the loop with Dop-in announcements, studio openings, exclusive content and more!</p>
+					<div class="notified-form">
+						<form>
+							<div class="form-group">
+								<div class="col-md-3">
+									<input type="text" name="zip" placeholder="Zip Code" class="form-control">
+								</div>
+								<div class="col-md-6">
+									<input type="email" name="email" placeholder="Email" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<input type="submit" name="submit-btn" value="Submit">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="followinsta text-center">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<h4>
+							<img src="images/insta.png" class="img-responsive" alt="instagram-icon">
+							Follow us on Instagram
+						</h4>
+						<div id="jssor_1" class="insta-slider">
+					        <div data-u="slides" class="slides">
+					            <div>
+					                <a href="#"><img data-u="image" src="images/insta_pic1.png" alt="instagram-img"/></a>
+					            </div>
+					            <div>
+					                <a href="#"><img data-u="image" src="images/insta_pic2.png" alt="instagram-img"/></a>
+					            </div>
+					            <div>
+					                <a href="#"><img data-u="image" src="images/insta_pic3.png" alt="instagram-img"/></a>
+					            </div>
+					            <div>
+					                <a href="#"><img data-u="image" src="images/insta_pic4.png" alt="instagram-img"/></a>
+					            </div>
+					            <div>
+					                <a href="#"><img data-u="image" src="images/insta_pic5.png" alt="instagram-img"/></a>
+					            </div>
+					            <div>
+					                <a href="#"><img data-u="image" src="images/insta_pic1.png" alt="instagram-img"/></a>
+					            </div>
+					            <div>
+					                <a href="#"><img data-u="image" src="images/insta_pic2.png" alt="instagram-img"/></a>
+					            </div>
+					            <div>
+					                <a href="#"><img data-u="image" src="images/insta_pic3.png" alt="instagram-img"/></a>
+					            </div>
+					            <div>
+					                <a href="#"><img data-u="image" src="images/insta_pic4.png" alt="instagram-img"/></a>
+					            </div>
+					            <div>
+					                <a href="#"><img data-u="image" src="images/insta_pic5.png" alt="instagram-img"/></a>
+					            </div>
+					        </div>
+					    </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<div class="copyright">
+					&copy 2017 - Copyright Tier5
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 text-right">
+				<ul>
+					<li><a href="#"><img src="images/fb.png" alt="socialicon" class="img-responsive" /></a></li>
+					<li><a href="#"><img src="images/insta.png" alt="socialicon" class="img-responsive" /></a></li>
+					<li><a href="#"><img src="images/pinterest.png" alt="socialicon" class="img-responsive" /></a></li>
+					<li><a href="#"><img src="images/twitter.png" alt="socialicon" class="img-responsive" /></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    $('.menu-icon').click(function(e){
+	        $('.main-menu').slideToggle(500);
+	        $(this).toggleClass("close");
+	        e.preventDefault();
+	    });
+	});
+</script>
+<script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".scroller a").click(function() {
+	        $('html, body').animate({
+	            scrollTop: $("#findfitness").offset().top
+	        }, 1000);
+	    });
+	});
+</script>
+</body>
+</html>
