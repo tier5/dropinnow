@@ -37,6 +37,46 @@ body{
     background-size: cover;
 }
 
+.top-menu .signin{
+    float: right;
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 70px;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.top-menu .signin:hover{
+    color: #98BB65;
+    text-decoration: none;
+}
+
+.signinmodal input.form-control{
+    border-radius: 10px;
+    font-size: 16px;
+    height: 37px;
+    text-transform: capitalize;
+}
+
+.modal-backdrop.in {
+    opacity: .8;
+}
+
+.signinmodal .greenbtn:hover{
+    color: #98BB65;
+}
+
+.modal-header{
+    border: none;
+    text-align: center;
+}
+
+.modal-header h4{
+    font-size: 25px;
+    font-family: 'OpenSans-Light';
+    color: #111;
+}
+
 .top-menu .menu-icon {
     position: absolute;
     background-color: transparent;
