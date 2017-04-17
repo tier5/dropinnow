@@ -14,6 +14,11 @@
 }
 
 @font-face {
+    font-family:'OpenSans-Bold';
+    src:url('../fonts/OpenSans-Semibold.ttf') format('truetype');
+}
+
+@font-face {
     font-family:'bebas';
     src:url('../fonts/BEBAS.TTF') format('truetype');
 }
@@ -32,10 +37,23 @@ body{
     clear: both;
 }
 
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
 .homebanner{
     background: url(../images/banner.jpg) no-repeat center;
     background-size: cover;
 }
+
+.profilebanner{
+    background: url(../images/profilebanner.jpg) no-repeat center;
+    background-size: cover;
+}
+
 
 .top-menu .signin{
     float: right;
@@ -66,6 +84,10 @@ body{
     color: #98BB65;
 }
 
+.modal-content{
+    background: #717caa;
+}
+
 .modal-header{
     border: none;
     text-align: center;
@@ -74,7 +96,7 @@ body{
 .modal-header h4{
     font-size: 25px;
     font-family: 'OpenSans-Light';
-    color: #111;
+    color: #fff;
 }
 
 .top-menu .menu-icon {
@@ -146,6 +168,15 @@ body{
 .logo, .top-menu{
     padding: 20px 0;
     position: relative;
+}
+
+.logo a, .logout a{
+    display: inline-block;
+}
+
+.logout {
+    padding: 30px 0 0;
+    text-align: right;
 }
 
 .main-menu{
@@ -245,6 +276,20 @@ section > div{
     text-transform: uppercase;
     font-size: 40px;
     margin: 50px 0;
+}
+
+.about h3{
+    font-family: 'bebas';
+    color: #7b7b7b;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+.about h4{
+    font-family: 'OpenSans-Bold';
+    color: #666;
+    text-transform: uppercase;
+    font-size: 22px;
 }
 
 .about p{
@@ -451,6 +496,114 @@ section > div{
     overflow:hidden;
 }
 
+header.profilebanner h1{
+    font-family: 'bebas';
+    font-size: 65px;
+    margin: 20px 0;
+}
+
+header.profilebanner h1 span{
+    display: block;
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+.banner-txt{
+    padding: 200px 0;
+}
+
+.banner-txt p{
+    width: 50%;
+    display: inline-block;
+}
+
+.about.profile{
+    background: #fff;
+}
+
+.about.profile p{
+    margin-top: 30px;
+    line-height: 35px;
+}
+
+.about.profile img{
+    width: 100%;
+}
+
+.facilities h2{
+    font-family: 'OpenSans-Light';
+    color: #0931a3;
+    font-size: 42px;
+    text-transform: capitalize;
+    margin: 0 0 60px;
+}
+
+.facilities{
+    margin: 100px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.facility{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+    padding: 120px 20px;
+    height: 500px;
+}
+
+.facility:hover{
+    transition: 0.5s;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    z-index: 9;
+}
+
+.about.profile .facility h3{
+    font-family: 'OpenSans-Bold';
+    color: #fff;
+    height: 75px;
+    margin: 0;
+}
+
+.about.profile .facility p{
+    color: #fff;
+    line-height: 20px;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.about.profile .facility a{
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #fff;
+    position: absolute;
+    bottom: 15%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    text-transform: capitalize;
+    font-size: 16px;
+    padding: 7px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+.facility.yoga{
+    background-image: url('../images/yoga.jpg'); 
+}
+.facility.rock{
+    background-image: url('../images/rock_climbing.jpg'); 
+}
+.facility.crossfit{
+    background-image: url('../images/crossfit.jpg'); 
+}
+.facility.regulargym{
+    background-image: url('../images/regular_gym.jpg'); 
+}
+
+
 footer{
     background: #0931a3;
     color: #fff;
@@ -476,6 +629,9 @@ footer ul li:last-child{
   .ui-tabs .ui-tabs-nav li {
       margin-right: 30px;
   }
+  .about.profile .facility a {
+    padding: 7px 15px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px){
@@ -490,6 +646,32 @@ footer ul li:last-child{
   }
   .notified-form .form-control {
     margin-bottom: 14px;
+  }
+  .banner-txt {
+    padding: 50px 0;
+  }
+  header.profilebanner h1 {
+    font-size: 50px;
+    margin: 10px 0;
+  }
+  header.profilebanner h1 span {
+    font-size: 30px;
+    margin: 10px 0;
+  }
+  .about.profile .facility h3 {
+    font-size: 28px;
+  }
+  .about.profile .facility a {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  .facility {
+    padding: 70px 5px;
+    height: 360px;
+  }
+  .about.profile .facility p {
+    margin-top: 0;
+    font-size: 12px;
   }
 }
 
@@ -523,6 +705,47 @@ footer ul li:last-child{
   .notified-form {
     width: 100%;
     margin: 20px 0;
+  }
+  .facility {
+    background-size: cover;
+    padding: 50px 20px;
+    height: auto;
+  }
+  .banner-txt {
+    padding: 50px 0;
+  }
+  header.profilebanner h1 span {
+    font-size: 25px;
+  }
+  header.profilebanner h1 {
+    font-size: 40px;
+  }
+  .about.profile .facility h3 {
+    height: auto;
+  }
+  .about.profile .facility a {
+    position: relative;
+    transform: translate(0);
+    left: 0;
+    bottom: 0;
+  }
+  .facilities {
+    margin: 50px 0 0;
+  }
+  .banner-txt p {
+    width: 100%;
+    font-size: 12px;
+  }
+  .about h3 {
+    font-size: 24px;
+  }
+  .about h4 {
+    font-size: 15px;
+  }
+  .about.profile p {
+    margin-top: 0;
+    line-height: 20px;
+    font-size: 12px;
   }
   footer .col-md-6{
       text-align: center;
