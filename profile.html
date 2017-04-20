@@ -72,7 +72,7 @@
 							<div class="facility yoga">
 								<h3>yoga</h3>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-								<a href="#">read more</a>
+								<a href="#" class="readmore">read more</a>
 							</div>
 						</div>
 					</div>
@@ -81,7 +81,7 @@
 							<div class="facility rock">
 								<h3>rock climbing</h3>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-								<a href="#">read more</a>
+								<a href="#" class="readmore">read more</a>
 							</div>
 						</div>
 					</div>
@@ -90,7 +90,7 @@
 							<div class="facility crossfit">
 								<h3>cross fit</h3>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-								<a href="#">read more</a>
+								<a href="#" class="readmore">read more</a>
 							</div>
 						</div>
 					</div>
@@ -99,7 +99,26 @@
 							<div class="facility regulargym">
 								<h3>regular gym</h3>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-								<a href="#">read more</a>
+								<a href="#" class="readmore">read more</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="popup-box yoga-pop">
+						<a href="#" class="close-btn">X</a>
+						<div class="col-md-6 col-sm-6">
+							<div class="image-box"> 
+								<img src="images/yoga_popup.jpg" class="img-responsive" alt="image">
+								<div class="img-border"></div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<div class="text-box"> 
+								<h2>yoga</h2>
+								<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p>
 							</div>
 						</div>
 					</div>
@@ -181,6 +200,17 @@
 	        $('.main-menu').slideToggle(500);
 	        $(this).toggleClass("close");
 	        e.preventDefault();
+	    });
+
+	    $(".yoga a.readmore").click(function(e){
+	    	$(".yoga-pop").addClass("open");
+	    	$(".facilities").children().hide();
+	    	e.preventDefault();
+	    });
+	    $(".close-btn").click(function(e){
+	    	$(".yoga-pop").removeClass("open");
+	    	$(".facilities").children().show();
+	    	e.preventDefault();
 	    });
 	});
 </script>
