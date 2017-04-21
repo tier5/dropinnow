@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
               $AutoPlay: true,
               $AutoPlaySteps: 5,
               $SlideDuration: 160,
-              $SlideWidth: 180,
+              $SlideWidth: 160,
               $SlideSpacing: 0,
               $Cols: 5,
               $ArrowNavigatorOptions: {
@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
             function ScaleSlider() {
                 var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
                 if (refSize) {
-                    refSize = Math.min(refSize, 1920);
+                    refSize = Math.min(refSize, 2042);
                     jssor_1_slider.$ScaleWidth(refSize);
                 }
                 else {
