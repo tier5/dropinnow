@@ -27,7 +27,13 @@
 					<a href="#"><img src="images/gym_logo.png" class="img-responsive" alt="DropInNowLogo"></a>
 				</div>
 			</div>
-			<div class="col-md-6 col-sm-6 col-xs-6">
+			<div class="col-md-6 col-sm-6 col-xs-6 text-right">
+				<div class="logout">
+					<a href="#" title="Save" class="save"><img src="images/save_on.png" class="img-responsive" alt="save-button"></a>	
+				</div>
+				<div class="logout">
+					<a href="#" title="Edit" class="edit"><img src="images/edit.png" class="img-responsive" alt="edit-button"></a>	
+				</div>
 				<div class="logout">
 					<a href="#" title="Logout"><img src="images/logout_button.png" class="img-responsive" alt="logout-button"></a>	
 				</div>
@@ -36,8 +42,14 @@
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<div class="banner-txt">
-					<h1><span>welcome to</span>  crossfit studio</h1>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500</p>
+					<form>
+						<h1>
+							<span>welcome to</span> 
+							<input type="text" value="crossfit studio" readonly="true"> 
+						</h1>
+						<textarea rows="5" readonly="readonly">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500</textarea>
+						<input type="submit" value="save">
+					</form>
 				</div>
 			</div>
 		</div>
@@ -210,6 +222,12 @@
 	    $(".close-btn").click(function(e){
 	    	$(".yoga-pop").removeClass("open");
 	    	$(".facilities").children().show();
+	    	e.preventDefault();
+	    });
+	    $(".edit").click(function(e){
+	    	$(".banner-txt h1 input").removeAttr('readonly').addClass("editContent").focus();
+	    	$(".banner-txt textarea").removeAttr('readonly').addClass("editContent").focus();
+	    	$(".banner-txt input[type='submit']").addClass("show");
 	    	e.preventDefault();
 	    });
 	});
