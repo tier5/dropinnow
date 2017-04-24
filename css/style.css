@@ -167,13 +167,101 @@ body{
     display: none;
 }
 
-.logo, .top-menu{
+.logo{
+    padding: 20px 0;
+}
+
+.top-menu{
     padding: 20px 0;
     position: relative;
 }
 
-.logo a, .logout a{
+.logo a {
+  float: left;
+  clear: both;
+} 
+
+.logout a{
     display: inline-block;
+}
+
+.img-upload .upload-box{
+    background: #cad2ff;
+    padding: 10px;
+    color: #111;
+    width: 55%;
+    margin-top: 5px;
+    position: absolute;
+    top: 100%;
+    left: 50px;
+    z-index: 99;
+    display: none;
+}
+
+.img-upload a.upload{
+    width: 55%;
+}
+
+.img-upload a.upload img{
+    margin: auto;
+    width: auto;
+}
+
+.img-upload .header-txt{
+    font-size: 16px;
+    border-bottom: 1px solid #0931a3;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.img-upload .upload-box .step{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.img-upload .upload-box .step span{
+    display: block;
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-align: left;
+} 
+
+.img-upload .upload-box .step input{
+    float: left;
+}
+
+.img-upload .upload-box .step a, .img-upload .upload-box .step input[type='submit']{
+    clear: none;
+    color: #111;
+    padding: 3px 20px;
+    margin-left: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 1px solid #999;
+    font-size: 12px;
+    background: #ffffff;
+    display: inline-block;
+    text-transform: capitalize;
+    text-decoration: none;
+    background: -moz-linear-gradient(top, #ffffff 0%, #999999 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%,#999999 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#999999 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#999999',GradientType=0 );
+}
+
+.img-upload .upload-box .step a:hover{
+    background: -moz-linear-gradient(top, #999 0%, #fff 100%);
+    background: -webkit-linear-gradient(top, #999 0%,#fff 100%);
+    background: linear-gradient(to bottom, #999 0%,#fff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999', endColorstr='#fff',GradientType=0 );
+}
+
+.img-upload .upload-box .step input[type='file']{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .logout {
@@ -183,10 +271,14 @@ body{
 }
 
 .logout .save img{
+  display: none;
+}
+
+.logout .save img, .logout .edit img{
     filter: brightness(0) invert(1);
 }
 
-.logout .save img:hover{
+.logout .save img:hover, .logout .edit img:hover, .logout .edit.clicked img{
     filter: brightness(1) invert(0);
 }
 
@@ -289,23 +381,95 @@ section > div{
     margin: 50px 0;
 }
 
-.about h3{
+/*.about h3{
     font-family: 'bebas';
     color: #7b7b7b;
     text-transform: uppercase;
     font-size: 35px;
+}*/
+
+.about input.fitness {
+    background: none;
+    text-align: left;
+    border: none;
+    padding: 5px;
+    font-family: 'bebas';
+    color: #7b7b7b;
+    text-transform: uppercase;
+    font-size: 35px;
+    width: 100%;
 }
 
-.about h4{
+/*.about h4{
     font-family: 'OpenSans-Bold';
     color: #666;
     text-transform: uppercase;
     font-size: 22px;
+}*/
+
+.about input.physical-shape {
+    background: none;
+    text-align: left;
+    border: none;
+    padding: 5px;
+    font-family: 'OpenSans-Bold';
+    color: #666;
+    text-transform: uppercase;
+    font-size: 22px;
+    width: 100%;
 }
 
 .about p{
-  color: #666;
-  line-height: 28px;
+    color: #666;
+    line-height: 28px;
+}
+
+.about textarea{
+    color: #666;
+    line-height: 28px;
+    background: none;
+    border: none;
+    outline: none;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+    resize: none;
+}
+
+.about input[type="submit"] {
+    background: none;
+    border: 1px solid #0931a3;
+    color: #0931a3;
+    padding: 10px 80px;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: block;
+    margin: 15px auto;
+    display: none;
+}
+
+.about input.fitness.editContent, .about input.physical-shape.editContent, .about textarea.editContent {
+    border: 1px solid #ccc;
+    outline: 0;
+    margin: 5px 0;
+    resize: vertical;
+}
+
+.about .img-upload a.upload {
+    width: 100%;
+    display: block;
+}
+
+.about .img-upload a.upload img {
+    width: auto;
+    float: right;
+    margin-right: 40px;
+}
+
+.about .img-upload .upload-box {
+    left: auto;
+    right: 40px;
 }
 
 .knowmore h2{
@@ -528,7 +692,7 @@ header.profilebanner h1 input{
 }
 
 .banner-txt{
-    padding: 200px 0;
+    padding: 100px 0;
 }
 
 .banner-txt textarea{
@@ -538,13 +702,14 @@ header.profilebanner h1 input{
     text-align: center;
     outline: none;
     border: none;
+    resize: none;
 }
 
 .banner-txt input[type="submit"]{
     background: none;
     border: 1px solid #fff;
     color: #fff;
-    padding: 10px 50px;
+    padding: 10px 80px;
     font-size: 18px;
     text-transform: uppercase;
     display: block;
@@ -552,13 +717,33 @@ header.profilebanner h1 input{
     display: none;
 }
 
+.banner .img-upload{
+    float: right;
+    margin-bottom: 20px;
+}
+
+.banner .img-upload .upload-box {
+    background: #cad2ff;
+    padding: 10px;
+    color: #111;
+    right: 0;
+    left: auto;
+    width: 25%;
+}
+
 header.profilebanner h1 input.editContent, header.profilebanner textarea.editContent{
     border: 1px solid #fff;
     outline: 0;
+    resize: vertical;
 }
 
 .about.profile{
     background: #fff;
+}
+
+.about.profile form{
+    display: inline-block;
+    width: 100%;
 }
 
 .about.profile p{
@@ -606,6 +791,8 @@ header.profilebanner h1 input.editContent, header.profilebanner textarea.editCon
     color: #fff;
     height: 75px;
     margin: 0;
+    text-transform: uppercase;
+    font-size: 34px;
 }
 
 .about.profile .facility p{
@@ -659,6 +846,36 @@ header.profilebanner h1 input.editContent, header.profilebanner textarea.editCon
     text-align: center;
 }
 
+.popup-box input.yoga-head {
+    background: none;
+    text-align: left;
+    border: none;
+    padding: 5px;
+    font-family: 'OpenSans-Light';
+    color: #0931a3;
+    font-size: 42px;
+    text-transform: capitalize;
+    margin: 0 0 40px;
+    text-align: center;
+    width: 100%;
+}
+
+.popup-box input.yoga-head.editContent {
+    border: 1px solid #ccc;
+    outline: 0;
+    margin: 5px 0;
+    text-align: left;
+
+}
+
+.about .popup-box .img-upload a.upload {
+    width: 70%;
+}
+
+.about .popup-box .img-upload a.upload img {
+    margin-right: 0;
+}
+
 .image-box{
     padding: 50px 30px 100px;
     position: relative;
@@ -677,8 +894,30 @@ header.profilebanner h1 input.editContent, header.profilebanner textarea.editCon
     right: 50px;
 }
 
-.yoga-pop.open{
+.image-box .img-upload{
+    display: none;
+}
+
+.yoga-pop.open, .rock-pop.open, .crossfit-pop.open,.regulargym-pop.open{
     display: inline-block;
+}
+
+.navigation{
+  display: none;
+}
+
+.navigation a{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+}
+
+.navigation a.prev{
+    left: 30px;
+}
+
+.navigation a.next{
+    right: 30px;
 }
 
 .text-box{
@@ -726,6 +965,12 @@ footer ul li:last-child{
     height: 250px;
     width: 250px;
   }
+  .img-upload .upload-box{
+      width: 70%;
+  }
+  .banner .img-upload .upload-box {
+    width: 30%;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px){
@@ -771,6 +1016,20 @@ footer ul li:last-child{
     height: 200px;
     width: 200px;
   }
+  .img-upload .upload-box{
+      width: 90%;
+  }
+  .banner .img-upload .upload-box {
+    width: 40%;
+  }
+  .popup-box input.yoga-head{
+    font-size: 27px;
+    margin-bottom: 20px;
+  }
+  .about textarea {
+    line-height: 20px;
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 767px){
@@ -792,7 +1051,7 @@ footer ul li:last-child{
   .notified-form .form-control {
     margin-bottom: 14px;
   }
-  .findfitness h2, .knowmore h2,.about h2, .affiliate-gym h2, .getnotified h2 {
+  .findfitness h2, .knowmore h2,.about h2, .affiliate-gym h2, .getnotified h2, header.profilebanner h1 input {
     font-size: 30px;
     margin: 0 0 10px;
   }
@@ -834,16 +1093,28 @@ footer ul li:last-child{
     width: 100%;
     font-size: 12px;
   }
-  .about h3 {
+  .about h3 , .about input.fitness{
     font-size: 24px;
   }
-  .about h4 {
-    font-size: 15px;
+  .about h4, .about input.physical-shape {
+    font-size: 10px;
+  }
+  .banner-txt textarea{
+    width: 100%;
   }
   .about.profile p {
     margin-top: 0;
     line-height: 20px;
     font-size: 12px;
+  }
+  .img-upload .upload-box .step input {
+    float: left;
+    width: 100%;
+}
+.img-upload .upload-box .step a, .img-upload .upload-box .step input[type='submit'] {
+  
+    margin-left: 0;
+    margin-top: 10px;
   }
   .about.profile .image-box img {
     width: 100%;
@@ -866,6 +1137,28 @@ footer ul li:last-child{
     top: -15px;
     padding: 0;
   }
+  .img-upload .upload-box {
+    width: 100%;
+  }
+  .banner .img-upload .upload-box{
+    width: 70%;
+    margin-top: 60px;
+  }
+  .about .img-upload .upload-box {
+    left: 0;
+    right: 40px;
+  }
+  .about .popup-box .img-upload a.upload {
+    width: 100%;
+}
+.about .popup-box .img-upload a.upload img {
+    margin: auto;
+    border: none;
+    float: none;
+}
+.logout .save img, .logout .edit img, .logout img {
+    width: 20px;
+}
   footer .col-md-6{
       text-align: center;
   }

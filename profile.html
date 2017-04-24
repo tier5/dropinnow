@@ -16,6 +16,7 @@
 <script src="js/jquery-ui.js"></script>
 <script src="js/jssor.slider-22.2.8.mini.js" type="text/javascript"></script>
 <script src="js/insta-slider.js"></script>
+<script src="js/custom.js"></script>
 </head>
 <body>
 <!-- Header Start -->
@@ -23,8 +24,26 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-sm-6 col-xs-6">
-				<div class="logo">
+				<div class="logo img-upload">
 					<a href="#"><img src="images/gym_logo.png" class="img-responsive" alt="DropInNowLogo"></a>
+					<a href="#" title="Upload Image" class="upload">
+						<img src="images/camera.png" class="img-responsive" alt="upload-button">
+					</a>
+					<div class="upload-box">
+						<form>
+							<div class="header-txt">Upload Photo</div>
+							<div class="step">
+								<span>Step 1: Select a file(.png)</span>
+								<input type="text">
+								<input type="file">
+								<a href="#">Select</a>
+							</div>
+							<div class="step">
+								<span>Step 2: Click the button below</span>
+								<input type="submit" value="upload">
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-6 text-right">
@@ -32,7 +51,7 @@
 					<a href="#" title="Save" class="save"><img src="images/save_on.png" class="img-responsive" alt="save-button"></a>	
 				</div>
 				<div class="logout">
-					<a href="#" title="Edit" class="edit"><img src="images/edit.png" class="img-responsive" alt="edit-button"></a>	
+					<a href="#" title="Edit" class="edit"><img src="images/edit_on.png" class="img-responsive" alt="edit-button"></a>	
 				</div>
 				<div class="logout">
 					<a href="#" title="Logout"><img src="images/logout_button.png" class="img-responsive" alt="logout-button"></a>	
@@ -40,7 +59,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12 text-center">
+			<div class="col-md-12 text-center banner">
 				<div class="banner-txt">
 					<form>
 						<h1>
@@ -48,8 +67,28 @@
 							<input type="text" value="crossfit studio" readonly="true"> 
 						</h1>
 						<textarea rows="5" readonly="readonly">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500</textarea>
-						<input type="submit" value="save">
+						<input type="submit" value="save" class="save-btn">
 					</form>
+				</div>
+				<div class="img-upload">
+					<a href="#" title="Upload Image" class="upload">
+						<img src="images/white_cam.png" class="img-responsive" alt="upload-button">
+					</a>
+					<div class="upload-box">
+						<form>
+							<div class="header-txt">Upload Photo</div>
+							<div class="step">
+								<span>Step 1: Select a file(.png)</span>
+								<input type="text">
+								<input type="file">
+								<a href="#">Select</a>
+							</div>
+							<div class="step">
+								<span>Step 2: Click the button below</span>
+								<input type="submit" value="upload">
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -61,18 +100,43 @@
 	<div class="about profile">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-1 col-sm-1 hidden-xs"></div>
-				<div class="col-md-6 col-sm-6">
-					<h2>About Us</h2>
-					<h3>fitness is the answer</h3>
-					<h4>whenever the question is your physical shape</h4>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.</p>
-				</div>
-				<div class="col-md-5 col-sm-5">
-					<div class="row">
-						<img src="images/aboutus.png" alt="about" class="img-responsive">
+				<form>
+					<div class="col-md-1 col-sm-1 hidden-xs"></div>
+					<div class="col-md-6 col-sm-6">
+						<h2>About Us</h2>
+						<input type="text" value="fitness is the answer" readonly="true" class="fitness">
+						<input type="text" value="whenever the question is your physical shape" readonly="true" class="physical-shape">
+						<textarea rows="5" readonly="readonly">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.</textarea>
 					</div>
-				</div>
+					<div class="col-md-5 col-sm-5">
+						<div class="row">
+							<img src="images/aboutus.png" alt="about" class="img-responsive">
+							<div class="img-upload">
+								<a href="#" title="Upload Image" class="upload">
+									<img src="images/blue_cam.png" class="img-responsive" alt="upload-button">
+								</a>
+								<div class="upload-box">
+									<form>
+										<div class="header-txt">Upload Photo</div>
+										<div class="step">
+											<span>Step 1: Select a file(.png)</span>
+											<input type="text">
+											<input type="file">
+											<a href="#">Select</a>
+										</div>
+										<div class="step">
+											<span>Step 2: Click the button below</span>
+											<input type="submit" value="upload">
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<input type="submit" value="save" class="save-btn">
+					</div>
+				</form>
 			</div>
 		</div>
 		<div class="container">
@@ -119,21 +183,155 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="popup-box yoga-pop">
-						<a href="#" class="close-btn">X</a>
-						<div class="col-md-6 col-sm-6">
-							<div class="image-box"> 
-								<img src="images/yoga_popup.jpg" class="img-responsive" alt="image">
-								<div class="img-border"></div>
+					<div class="pop">
+						<div class="popup-box yoga-pop">
+							<a href="#" class="close-btn">X</a>
+							<div class="col-md-6 col-sm-6">
+								<div class="image-box"> 
+									<img src="images/yoga_popup.jpg" class="img-responsive" alt="image">
+									<div class="img-border"></div>
+									<div class="img-upload">
+										<a href="#" title="Upload Image" class="upload">
+											<img src="images/blue_cam.png" class="img-responsive" alt="upload-button">
+										</a>
+										<div class="upload-box">
+											<form>
+												<div class="header-txt">Upload Photo</div>
+												<div class="step">
+													<span>Step 1: Select a file(.png)</span>
+													<input type="text">
+													<input type="file">
+													<a href="#">Select</a>
+												</div>
+												<div class="step">
+													<span>Step 2: Click the button below</span>
+													<input type="submit" value="upload">
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<div class="text-box"> 
+									<input type="text" value="yoga" readonly="true" class="yoga-head">
+									<textarea rows="10" readonly="readonly">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</textarea>
+								</div>
 							</div>
 						</div>
-						<div class="col-md-6 col-sm-6">
-							<div class="text-box"> 
-								<h2>yoga</h2>
-								<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p>
+						<div class="popup-box rock-pop">
+							<a href="#" class="close-btn">X</a>
+							<div class="col-md-6 col-sm-6">
+								<div class="image-box"> 
+									<img src="images/rock_climbing_r.jpg" class="img-responsive" alt="image">
+									<div class="img-border"></div>
+									<div class="img-upload">
+										<a href="#" title="Upload Image" class="upload">
+											<img src="images/blue_cam.png" class="img-responsive" alt="upload-button">
+										</a>
+										<div class="upload-box">
+											<form>
+												<div class="header-txt">Upload Photo</div>
+												<div class="step">
+													<span>Step 1: Select a file(.png)</span>
+													<input type="text">
+													<input type="file">
+													<a href="#">Select</a>
+												</div>
+												<div class="step">
+													<span>Step 2: Click the button below</span>
+													<input type="submit" value="upload">
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<div class="text-box"> 
+									<input type="text" value="rock climbing" readonly="true" class="yoga-head">
+									<textarea rows="10" readonly="readonly">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</textarea>
+								</div>
+							</div>
+						</div>
+						<div class="popup-box crossfit-pop">
+							<a href="#" class="close-btn">X</a>
+							<div class="col-md-6 col-sm-6">
+								<div class="image-box"> 
+									<img src="images/crossfit_r.jpg" class="img-responsive" alt="image">
+									<div class="img-border"></div>
+									<div class="img-upload">
+										<a href="#" title="Upload Image" class="upload">
+											<img src="images/blue_cam.png" class="img-responsive" alt="upload-button">
+										</a>
+										<div class="upload-box">
+											<form>
+												<div class="header-txt">Upload Photo</div>
+												<div class="step">
+													<span>Step 1: Select a file(.png)</span>
+													<input type="text">
+													<input type="file">
+													<a href="#">Select</a>
+												</div>
+												<div class="step">
+													<span>Step 2: Click the button below</span>
+													<input type="submit" value="upload">
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<div class="text-box"> 
+									<input type="text" value="cross fit" readonly="true" class="yoga-head">
+									<textarea rows="10" readonly="readonly">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</textarea>
+								</div>
+							</div>
+						</div>
+						<div class="popup-box regulargym-pop">
+							<a href="#" class="close-btn">X</a>
+							<div class="col-md-6 col-sm-6">
+								<div class="image-box"> 
+									<img src="images/regular_gym_r.jpg" class="img-responsive" alt="image">
+									<div class="img-border"></div>
+									<div class="img-upload">
+										<a href="#" title="Upload Image" class="upload">
+											<img src="images/blue_cam.png" class="img-responsive" alt="upload-button">
+										</a>
+										<div class="upload-box">
+											<form>
+												<div class="header-txt">Upload Photo</div>
+												<div class="step">
+													<span>Step 1: Select a file(.png)</span>
+													<input type="text">
+													<input type="file">
+													<a href="#">Select</a>
+												</div>
+												<div class="step">
+													<span>Step 2: Click the button below</span>
+													<input type="submit" value="upload">
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<div class="text-box"> 
+									<input type="text" value="regular gym" readonly="true" class="yoga-head">
+									<textarea rows="10" readonly="readonly">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</textarea>
+								</div>
 							</div>
 						</div>
 					</div>
+					<div class="navigation">
+						<a href="#" class="prev"><img src="images/side_aroow_l.png" class="img-responsive"></a>
+						<a href="#" class="next"><img src="images/side_aroow_r.png" class="img-responsive"></a>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<input type="submit" value="save" class="save-btn">
 				</div>
 			</div>
 		</div>
@@ -206,31 +404,5 @@
 		</div>
 	</div>
 </footer>
-<script type="text/javascript">
-	$(document).ready(function(){
-	    $('.menu-icon').click(function(e){
-	        $('.main-menu').slideToggle(500);
-	        $(this).toggleClass("close");
-	        e.preventDefault();
-	    });
-
-	    $(".yoga a.readmore").click(function(e){
-	    	$(".yoga-pop").addClass("open");
-	    	$(".facilities").children().hide();
-	    	e.preventDefault();
-	    });
-	    $(".close-btn").click(function(e){
-	    	$(".yoga-pop").removeClass("open");
-	    	$(".facilities").children().show();
-	    	e.preventDefault();
-	    });
-	    $(".edit").click(function(e){
-	    	$(".banner-txt h1 input").removeAttr('readonly').addClass("editContent").focus();
-	    	$(".banner-txt textarea").removeAttr('readonly').addClass("editContent").focus();
-	    	$(".banner-txt input[type='submit']").addClass("show");
-	    	e.preventDefault();
-	    });
-	});
-</script>
 </body>
 </html>
